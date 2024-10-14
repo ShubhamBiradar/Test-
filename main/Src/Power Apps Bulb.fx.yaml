@@ -1,0 +1,50 @@
+"'Power Apps Bulb' As screen":
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    Img_on As image:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =506
+        Image: ='bulb off'
+        ImagePosition: =ImagePosition.Fill
+        Visible: =isBulbon
+        Width: =350
+        X: =825
+        Y: =48
+        ZIndex: =1
+
+    Img_off As image:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =506
+        Image: ='bulb on'
+        ImagePosition: =ImagePosition.Fill
+        Visible: =isBulboff
+        Width: =350
+        X: =825
+        Y: =48
+        ZIndex: =2
+
+    btn_off As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Set(isBulboff,true);Set(isBulbon,false);
+        Text: ="on"
+        Width: =96
+        X: =226
+        Y: =537
+        ZIndex: =3
+
+    btn_on As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Set(isBulbon,true);Set(isBulboff,false);
+        Text: ="off"
+        Width: =96
+        X: =483
+        Y: =537
+        ZIndex: =4
+
